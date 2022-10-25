@@ -4,6 +4,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
+
         android:label="usando_maps"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
@@ -20,6 +21,8 @@
                  while the Flutter UI initializes. After that, this theme continues
                  to determine the Window background behind the Flutter UI. -->
             <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyBIro1UJ1e3ugl6MXLPXkfG__haOB3ce7M"/>
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
