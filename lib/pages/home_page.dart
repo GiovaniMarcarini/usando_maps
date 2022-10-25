@@ -21,4 +21,18 @@ class _HomePageState extends State<HomePage>{
       body: _criarBody(),
     );
   }
+
+  Widget _criarBody() => ListView(
+    children: const [
+      Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10),
+            child: ElevatedButton(
+              child: Text('Obter localização Atual'),
+              onPressed: _obterLocalizacaoAtual,
+            ),
+      )
+    ],
+  );
+
+
 }
