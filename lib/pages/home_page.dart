@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage>{
                     child: Text(_textoLocalizacao),
                 ),
                 ElevatedButton(
-                    onPressed: _abrirCoordenadasNoMapa,
+                    onPressed: _abriNoMapaInterno,
                     child: const Icon(Icons.map))
               ],
             ),
@@ -137,10 +137,11 @@ class _HomePageState extends State<HomePage>{
     if(_localizacaoAtual == null){
       return;
     }
-    Navigator.push(context,MaterialPageRoute(
-        builder: (BuildContext context) =>MapasPage(
-            longetude: _localizacaoAtual!.longitude,
-            latitude: _localizacaoAtual!.latitude,
+    Navigator.push(context,
+        MaterialPageRoute(
+        builder: (BuildContext context) => MapasPage(
+          latitude: _localizacaoAtual!.latitude,
+          longitude: _localizacaoAtual!.longitude,
         ),
     ));
   }
