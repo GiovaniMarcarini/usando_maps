@@ -43,6 +43,15 @@ class _MapasPageState extends State<MapasPage> {
       ),
       body: GoogleMap(
         mapType: MapType.normal,
+        markers: {
+           Marker(
+            markerId: MarkerId('1'),
+            position: LatLng(widget.latitude, widget.longitude),
+            infoWindow: InfoWindow(
+              title: 'Café da Praça',
+            ),
+          ),
+        },
         initialCameraPosition: CameraPosition(
           target: LatLng(widget.latitude, widget.longitude),
           zoom: 15,
